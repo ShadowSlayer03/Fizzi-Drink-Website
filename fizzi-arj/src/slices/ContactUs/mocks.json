@@ -1,0 +1,80 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Yellow"
+						}
+					}
+				]
+			},
+			"address": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Mollit officia fugiat sint nostrud. Sunt sit pariatur excepteur quis reprehenderit non. Anim enim id aliquip deserunt culpa."
+						}
+					}
+				]
+			},
+			"email": {
+				"__TYPE__": "FieldContent",
+				"value": "if",
+				"type": "Text"
+			},
+			"phone": {
+				"__TYPE__": "FieldContent",
+				"value": "baseball",
+				"type": "Text"
+			},
+			"social_links": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "trip",
+									"type": "Text"
+								}
+							],
+							[
+								"url",
+								{
+									"key": "6fdefc04-46f5-4a92-a2ad-ae6ad39e01e4",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com",
+										"text": "rain"
+									}
+								}
+							]
+						]
+					}
+				]
+			},
+			"blob_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#70e8a0",
+				"type": "Color"
+			},
+			"background_wave": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			}
+		},
+		"items": []
+	}
+]

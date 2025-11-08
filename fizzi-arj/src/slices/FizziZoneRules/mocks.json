@@ -1,0 +1,163 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Follow"
+						}
+					}
+				]
+			},
+			"rules_list": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"rule_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "tape",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"play_button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "lay",
+				"type": "Text"
+			},
+			"gamescreenheading": {
+				"__TYPE__": "FieldContent",
+				"value": "complex",
+				"type": "Text"
+			},
+			"gamescreeninfo": {
+				"__TYPE__": "FieldContent",
+				"value": "zero",
+				"type": "Text"
+			},
+			"gamescreenbuttontext": {
+				"__TYPE__": "FieldContent",
+				"value": "including",
+				"type": "Text"
+			},
+			"rules_list_placeholder": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Eiusmod pariatur enim consectetur sunt do enim cillum magna aliquip ullamco dolor non Lorem in. Velit reprehenderit duis minim commodo nostrud sunt ea fugiat et excepteur voluptate esse. Adipisicing elit ea ea nulla incididunt exercitation dolore amet nisi reprehenderit laborum."
+						}
+					}
+				]
+			},
+			"hudscoretext": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Eiusmod adipisicing incididunt duis enim magna nostrud exercitation quis consequat est occaecat exercitation commodo. Duis dolor Lorem consequat laborum proident reprehenderit. Eiusmod officia sit minim ea magna do labore."
+						}
+					}
+				]
+			},
+			"hudtimeremainingtext": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "In consectetur dolor et amet non cupidatat est quis. Veniam ad ex amet laborum. Ullamco velit excepteur id laborum in labore anim incididunt sint tempor enim aliqua laborum consequat labore."
+						}
+					}
+				]
+			},
+			"hudcredittext": {
+				"__TYPE__": "FieldContent",
+				"value": "something",
+				"type": "Text"
+			},
+			"hudcreditvalue": {
+				"__TYPE__": "FieldContent",
+				"value": "some",
+				"type": "Text"
+			},
+			"gameoverheading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Spirit"
+						}
+					}
+				]
+			},
+			"gameovertotalpointstext": {
+				"__TYPE__": "FieldContent",
+				"value": "wrong",
+				"type": "Text"
+			},
+			"gameoverredeemablepointstext": {
+				"__TYPE__": "FieldContent",
+				"value": "hung",
+				"type": "Text"
+			},
+			"gameoverconversionrate": {
+				"__TYPE__": "FieldContent",
+				"value": "thought",
+				"type": "Text"
+			},
+			"gameovertimeplayedtext": {
+				"__TYPE__": "FieldContent",
+				"value": "excited",
+				"type": "Text"
+			},
+			"gameoverliveslefttext": {
+				"__TYPE__": "FieldContent",
+				"value": "movement",
+				"type": "Text"
+			},
+			"gameovertimeplayedunit": {
+				"__TYPE__": "FieldContent",
+				"value": "greatly",
+				"type": "Text"
+			},
+			"gameoverplayagaintext": {
+				"__TYPE__": "FieldContent",
+				"value": "pain",
+				"type": "Text"
+			},
+			"gameoverfindstorestext": {
+				"__TYPE__": "FieldContent",
+				"value": "page",
+				"type": "Text"
+			},
+			"gameoverfizzipointstext": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Laborum pariatur culpa et mollit. Dolor nostrud aute sint ex et ullamco officia cillum ad qui adipisicing."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

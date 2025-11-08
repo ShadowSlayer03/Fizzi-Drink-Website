@@ -1,0 +1,46 @@
+{
+  "id": "alternate_text_slice",
+  "type": "SharedSlice",
+  "name": "AlternateText",
+  "description": "AlternateTextSlice",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "text_group": {
+          "type": "Group",
+          "config": {
+            "label": "Text Group",
+            "repeat": true,
+            "fields": {
+              "heading": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Heading",
+                  "placeholder": "Heading for AlternativeText",
+                  "allowTargetBlank": true,
+                  "single": "heading2"
+                }
+              },
+              "body": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Body",
+                  "placeholder": "Body for AlternativeText",
+                  "allowTargetBlank": true,
+                  "multi": "strong,em,paragraph"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

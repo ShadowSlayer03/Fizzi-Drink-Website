@@ -1,0 +1,187 @@
+{
+  "id": "rules",
+  "type": "SharedSlice",
+  "name": "FizziZoneRules",
+  "description": "Rules",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading1"
+          }
+        },
+        "rules_list": {
+          "type": "Group",
+          "config": {
+            "label": "Rules List",
+            "repeat": true,
+            "fields": {
+              "rule_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Rule Text",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "play_button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Play Button Text",
+            "placeholder": ""
+          }
+        },
+        "gamescreenheading": {
+          "type": "Text",
+          "config": {
+            "label": "GameScreenHeading",
+            "placeholder": ""
+          }
+        },
+        "gamescreeninfo": {
+          "type": "Text",
+          "config": {
+            "label": "GameScreenInfo",
+            "placeholder": ""
+          }
+        },
+        "gamescreenbuttontext": {
+          "type": "Text",
+          "config": {
+            "label": "GameScreenButtonText",
+            "placeholder": ""
+          }
+        },
+        "rules_list_placeholder": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Rules List Placeholder",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "hudscoretext": {
+          "type": "StructuredText",
+          "config": {
+            "label": "HUDScoreText",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "hudtimeremainingtext": {
+          "type": "StructuredText",
+          "config": {
+            "label": "HUDTimeRemainingText",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "hudcredittext": {
+          "type": "Text",
+          "config": {
+            "label": "HUDCreditText",
+            "placeholder": ""
+          }
+        },
+        "hudcreditvalue": {
+          "type": "Text",
+          "config": {
+            "label": "HUDCreditValue",
+            "placeholder": ""
+          }
+        },
+        "gameoverheading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "GameOverHeading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        },
+        "gameovertotalpointstext": {
+          "type": "Text",
+          "config": {
+            "label": "GameOverTotalPointsText",
+            "placeholder": ""
+          }
+        },
+        "gameoverredeemablepointstext": {
+          "type": "Text",
+          "config": {
+            "label": "GameOverRedeemablePointsText",
+            "placeholder": ""
+          }
+        },
+        "gameoverconversionrate": {
+          "type": "Text",
+          "config": {
+            "label": "GameOverConversionRate",
+            "placeholder": ""
+          }
+        },
+        "gameovertimeplayedtext": {
+          "type": "Text",
+          "config": {
+            "label": "GameOverTimePlayedText",
+            "placeholder": ""
+          }
+        },
+        "gameovertimeplayedunit": {
+          "type": "Text",
+          "config": {
+            "label": "GameOverTimePlayedUnit",
+            "placeholder": ""
+          }
+        },
+        "gameoverliveslefttext": {
+          "type": "Text",
+          "config": {
+            "label": "GameOverLivesLeftText",
+            "placeholder": ""
+          }
+        },
+        "gameoverplayagaintext": {
+          "type": "Text",
+          "config": {
+            "label": "GameOverPlayAgainText",
+            "placeholder": ""
+          }
+        },
+        "gameoverfindstorestext": {
+          "type": "Text",
+          "config": {
+            "label": "GameOverFindStoresText",
+            "placeholder": ""
+          }
+        },
+        "gameoverfizzipointstext": {
+          "type": "StructuredText",
+          "config": {
+            "label": "GameOverFizziPointsText",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

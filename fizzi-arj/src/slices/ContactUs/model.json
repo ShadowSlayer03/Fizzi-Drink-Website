@@ -1,0 +1,94 @@
+{
+  "id": "contact_us",
+  "type": "SharedSlice",
+  "name": "ContactUs",
+  "description": "ContactUs",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "Heading for ContactUs page",
+            "allowTargetBlank": true,
+            "single": "heading1"
+          }
+        },
+        "address": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Address",
+            "placeholder": "Address for ContactUs page",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "email": {
+          "type": "Text",
+          "config": {
+            "label": "Email",
+            "placeholder": "Email for ContactUs page"
+          }
+        },
+        "phone": {
+          "type": "Text",
+          "config": {
+            "label": "Phone",
+            "placeholder": "Contact number for ContactUs page"
+          }
+        },
+        "social_links": {
+          "type": "Group",
+          "config": {
+            "label": "Social Links",
+            "repeat": true,
+            "fields": {
+              "name": {
+                "type": "Text",
+                "config": {
+                  "label": "Name",
+                  "placeholder": ""
+                }
+              },
+              "url": {
+                "type": "Link",
+                "config": {
+                  "label": "URL",
+                  "placeholder": "URL for ContactUs page",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": false
+                }
+              }
+            }
+          }
+        },
+        "blob_color": {
+          "type": "Color",
+          "config": {
+            "label": "Blob color",
+            "placeholder": "Blob color in hex for ContactUs page"
+          }
+        },
+        "background_wave": {
+          "type": "Boolean",
+          "config": {
+            "label": "Background Wave",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

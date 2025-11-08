@@ -1,0 +1,31 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Block"
+						}
+					}
+				]
+			},
+			"price_copy": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Do occaecat labore reprehenderit laborum officia sit excepteur amet cillum officia officia consequat eiusmod exercitation. Cupidatat occaecat consectetur nisi excepteur in labore incididunt irure elit aliquip dolor officia."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

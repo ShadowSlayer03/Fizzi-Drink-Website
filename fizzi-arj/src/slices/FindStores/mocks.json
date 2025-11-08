@@ -1,0 +1,165 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"subtitle": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Leader"
+						}
+					}
+				]
+			},
+			"show_globe": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"globe_theme": {
+				"__TYPE__": "FieldContent",
+				"value": "Dark",
+				"type": "Select"
+			},
+			"background_style": {
+				"__TYPE__": "FieldContent",
+				"value": "Gradient",
+				"type": "Select"
+			},
+			"cta_text": {
+				"__TYPE__": "FieldContent",
+				"value": "lesson",
+				"type": "Text"
+			},
+			"cta_link": {
+				"key": "84a1178d-5f54-4558-a888-707f1ab67a2f",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "them"
+				}
+			},
+			"storeslist": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"city",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "orbit",
+									"type": "Text"
+								}
+							],
+							[
+								"country",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "together",
+									"type": "Text"
+								}
+							],
+							[
+								"address",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "former",
+									"type": "Text"
+								}
+							],
+							[
+								"latitude",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "55",
+									"type": "Number"
+								}
+							],
+							[
+								"longitude",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "25",
+									"type": "Number"
+								}
+							],
+							[
+								"featured",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"store_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
+										"width": 3560,
+										"height": 5340
+									},
+									"url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
+									"width": 3560,
+									"height": 5340,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "those",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							]
+						]
+					}
+				]
+			},
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Active"
+						}
+					}
+				]
+			},
+			"background_image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
+					"width": 4380,
+					"height": 2895
+				},
+				"url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
+				"width": 4380,
+				"height": 2895,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "prize",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			}
+		},
+		"items": []
+	}
+]
