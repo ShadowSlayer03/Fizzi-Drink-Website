@@ -205,7 +205,7 @@ const LandingSlice: FC<LandingSliceProps> = ({ slice }) => {
 
   const triggerScrollToRules = useGameFlowStore((s) => s.triggerScrollToRules);
 
-  const handleButtonClick = (e: React.MouseEvent) => {
+  const handleButtonClick = () => {
     setExploding(true);
 
     if (bubblesRef.current) {

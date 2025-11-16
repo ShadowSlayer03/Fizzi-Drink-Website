@@ -191,6 +191,7 @@ const Rules: FC<RulesProps> = ({ slice }) => {
     });
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (shouldScrollToRules) triggerBubbleTransition();
   }, [shouldScrollToRules]);
@@ -307,7 +308,7 @@ const Rules: FC<RulesProps> = ({ slice }) => {
           </div>
 
           <div className="absolute inset-0 overflow-hidden h-screen">
-            <FallingSprites />
+            <FallingSprites setGameOver={setGameOver} />
           </div>
 
           <div className="absolute inset-0 pointer-events-none">

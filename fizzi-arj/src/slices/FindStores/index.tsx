@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import NavMenu from "@/components/NavMenu";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -209,9 +210,9 @@ const FindStores: FC<FindStoresProps> = ({ slice }) => {
                   } bg-white/80 backdrop-blur-md`}
               >
                 {store.store_image?.url && (
-                  <img
+                  <Image
                     src={store.store_image.url}
-                    alt={store.city || "Fizzi Store"}
+                    alt={store.city || "Fizzi Store"}   
                     className="w-full h-40 object-cover rounded-2xl mb-4"
                   />
                 )}

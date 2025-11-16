@@ -86,7 +86,7 @@ function InteractiveText({
 }
 
 const ContactUs: FC<ContactUsProps> = ({ slice }) => {
-  const { heading, address, email, phone, social_links } = slice.primary;
+  const { heading, address, email, phone } = slice.primary;
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
