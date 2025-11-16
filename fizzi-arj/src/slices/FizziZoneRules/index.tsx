@@ -12,6 +12,7 @@ import { useLivesStore } from "@/store/livesStore";
 import { useScoreStore } from "@/store/scoreStore";
 import { useRouter } from "next/navigation";
 import ScratchCard from "@/components/ScratchCard";
+import generatePromoCode from "./util";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -28,7 +29,7 @@ const Rules: FC<RulesProps> = ({ slice }) => {
   const [hasPlayedBefore, setHasPlayedBefore] = useState(false);
   const [promoCode, setPromoCode] = useState("");
   const [showScratchCard, setShowScratchCard] = useState(false);
-  
+
   const sectionRef = useRef<HTMLElement | null>(null);
   const bubblesContainerRef = useRef<HTMLDivElement | null>(null);
   const bgMusicRef = useRef<HTMLAudioElement | null>(null);
@@ -46,14 +47,31 @@ const Rules: FC<RulesProps> = ({ slice }) => {
     setHasPlayedBefore(!!played);
   }, []);
 
-  const generatePromoCode = () => {
-    const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
-    let code = "FIZZ";
-    for (let i = 0; i < 6; i++) {
-      code += chars.charAt(Math.floor(Math.random() * chars.length));
+  // Hide navMenu when game starts, show again when game ends
+  useEffect(() => {
+    const navMenu = document.querySelector(".navMenu") as HTMLElement | null;
+
+    if (!navMenu) return;
+
+    // Game active → hide
+    if (gameActive && !gameOver) {
+      navMenu.style.opacity = "0";
+      navMenu.style.pointerEvents = "none";
     }
-    return code;
-  };
+
+    // Game over → show
+    else if (gameOver) {
+      navMenu.style.opacity = "1";
+      navMenu.style.pointerEvents = "auto";
+    }
+
+    // Before game starts → show
+    else {
+      navMenu.style.opacity = "1";
+      navMenu.style.pointerEvents = "auto";
+    }
+  }, [gameActive, gameOver]);
+
 
   useEffect(() => {
     if (gameOver && !hasPlayedBefore) {
@@ -126,7 +144,7 @@ const Rules: FC<RulesProps> = ({ slice }) => {
     setTimeRemaining(60);
 
     const gamePlayed = localStorage.getItem("fizzi_game_played");
-    if(gamePlayed)
+    if (gamePlayed)
       setShowScratchCard(false);
 
     useLivesStore.setState({ lives: 3 });
@@ -372,7 +390,7 @@ const Rules: FC<RulesProps> = ({ slice }) => {
               {hasPlayedBefore && (
                 <div className="bg-[#FEE832] p-6 rounded-2xl border-4 border-[#FE6334]">
                   <p className="text-[#690B3D] text-xl font-bold">
-                    {score > 400 ? "Great job! Keep playing to improve your score! 🎮" : "Better luck next time!" }
+                    {score > 400 ? "Great job! Keep playing to improve your score! 🎮" : "Better luck next time!"}
                   </p>
                 </div>
               )}

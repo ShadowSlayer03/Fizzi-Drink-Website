@@ -99,20 +99,25 @@ const FindStores: FC<FindStoresProps> = ({ slice }) => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Fade in title slowly with scale-up
-      gsap.fromTo(
-        ".fizzi-title",
-        { opacity: 0, scale: 0.95, y: 30 },
-        {
-          opacity: 0.08,
-          scale: 1,
-          y: 0,
-          duration: 2,
-          ease: "power3.out",
-        }
-      );
 
-      // Subtitle fade-in
+      // STEP 1 — Globe appears first
+      gsap.from(".fizzi-globe", {
+        opacity: 0,
+        duration: 1.8,
+        ease: "power3.out",
+      });
+
+      // STEP 2 — Then letters appear one-by-one
+      gsap.to(".fizzi-title", {
+        opacity: 0.5,
+        y: 40,
+        delay: 0.6,
+        duration: 2.5,
+        stagger: 0.8,
+      });
+
+      // (Your existing animations — unchanged)
+
       gsap.from(".fizzi-subtitle", {
         scrollTrigger: {
           trigger: ".fizzi-subtitle",
@@ -124,7 +129,6 @@ const FindStores: FC<FindStoresProps> = ({ slice }) => {
         ease: "power2.out",
       });
 
-      // Store cards appear with stagger
       gsap.from(".fizzi-store-card", {
         scrollTrigger: {
           trigger: ".fizzi-store-grid",
@@ -137,7 +141,6 @@ const FindStores: FC<FindStoresProps> = ({ slice }) => {
         ease: "back.out(1.7)",
       });
 
-      // CTA bounce-in
       gsap.from(".fizzi-cta", {
         scrollTrigger: {
           trigger: ".fizzi-cta",
@@ -148,10 +151,12 @@ const FindStores: FC<FindStoresProps> = ({ slice }) => {
         duration: 1,
         ease: "elastic.out(1, 0.7)",
       });
+
     }, sectionRef);
 
     return () => ctx.revert();
   }, []);
+
 
   return (
     <>
@@ -161,10 +166,10 @@ const FindStores: FC<FindStoresProps> = ({ slice }) => {
         ref={sectionRef}
         data-slice-type={slice.slice_type}
         className={`relative w-full min-h-screen flex flex-col items-center justify-center ${background_style === "Gradient"
-            ? "bg-gradient-to-br from-green-50 via-emerald-100 to-green-50"
-            : background_style === "Solid"
-              ? "bg-green-50"
-              : ""
+          ? "bg-gradient-to-br from-green-50 via-emerald-100 to-green-50"
+          : background_style === "Solid"
+            ? "bg-green-50"
+            : ""
           } overflow-hidden`}
         style={{
           backgroundImage:
@@ -178,7 +183,7 @@ const FindStores: FC<FindStoresProps> = ({ slice }) => {
         {/* 🌟 Background Title */}
         {title && (
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center select-none pointer-events-none z-10">
-            <h1 className="fizzi-title text-[30rem] font-extrabold text-green-500 leading-none tracking-tighter">
+            <h1 className="fizzi-title text-[30rem] font-extrabold text-green-500 leading-none tracking-tighter opacity-0">
               {asText(title)}
             </h1>
           </div>
@@ -186,7 +191,7 @@ const FindStores: FC<FindStoresProps> = ({ slice }) => {
 
         {/* 🌍 Globe */}
         {show_globe && (
-          <div className="relative mt-20 w-full h-[500px] md:h-[700px] overflow-hidden z-10">
+          <div className="fizzi-globe relative mt-20 w-full h-[500px] md:h-[700px] overflow-hidden z-10">
             <World data={arcs} globeConfig={globeConfig} />
           </div>
         )}
@@ -212,7 +217,7 @@ const FindStores: FC<FindStoresProps> = ({ slice }) => {
                 {store.store_image?.url && (
                   <Image
                     src={store.store_image.url}
-                    alt={store.city || "Fizzi Store"}   
+                    alt={store.city || "Fizzi Store"}
                     className="w-full h-40 object-cover rounded-2xl mb-4"
                   />
                 )}

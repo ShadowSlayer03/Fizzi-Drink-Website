@@ -8,7 +8,7 @@ type SVGComponentProps = React.SVGProps<SVGSVGElement> & {
   };
 };
 
-const Diamond: React.FC<SVGComponentProps> = (props) => (
+const Diamond: React.FC<SVGComponentProps> = () => (
   <img src="diamond.png" height={60} width={60} />
 );
 export default Diamond;

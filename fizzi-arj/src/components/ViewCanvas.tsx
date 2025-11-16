@@ -5,14 +5,12 @@ import React, { Suspense } from 'react'
 import { View } from '@react-three/drei';
 import dynamic from 'next/dynamic';
 
-type Props = {}
-
 const Loader = dynamic(
     () => import("@react-three/drei").then((mod) => mod.Loader),
     { ssr: false },
 );
 
-function ViewCanvas({ }: Props) {
+function ViewCanvas() {
     return (
         <>
             <Canvas

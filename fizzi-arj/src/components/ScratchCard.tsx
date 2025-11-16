@@ -101,7 +101,10 @@ const ScratchCard: React.FC<ScratchCardProps> = ({ promoCode, onReveal }) => {
         const percentage = (transparent / (pixels.length / 4)) * 100;
         setScratchPercentage(percentage);
 
-        if (onReveal) onReveal();
+        if (onReveal) { 
+            onReveal(); 
+            setIsRevealed(true);
+        }
     };
 
     const handleMouseDown = () => setIsScratching(true);
