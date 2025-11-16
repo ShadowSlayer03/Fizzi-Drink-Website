@@ -4,7 +4,7 @@ import { FC, useRef, useState } from "react";
 import { asText, Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Environment, Float, OrbitControls, Text3D } from "@react-three/drei";
+import { Environment, Float, Text3D } from "@react-three/drei";
 import { SodaCan } from "@/components/SodaCan";
 import * as THREE from "three";
 import BubbleCursor from "@/components/BubbleCursor";

@@ -9,15 +9,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 
-type Props = {}
-
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const Scene = (props: Props) => {
+const Scene = () => {
     const canRef = useRef<Group>(null);
 
-    const bgColors = ["FFA6B5", "#E9CFF6", "#CBEF9A"];
-
+    const bgColors = ["#FFA6B5", "#E9CFF6", "#CBEF9A"];
     const isDesktop = useMediaQuery("(min-width: 768px)", true);
 
     useGSAP(() => {
@@ -37,36 +34,45 @@ const Scene = (props: Props) => {
         });
 
         sections.forEach((_, index) => {
-            if (!canRef.current) return;
-            if (index === 0) return;
+            if (!canRef.current || index === 0) return;
 
             const isOdd = index % 2 !== 0;
 
-            const xPos = isDesktop ? (isOdd ? "-1" : "1") : 0
-            const yRot = isDesktop ? (isOdd ? "0.4" : "-0.4"): 0;
+            const xPos = isDesktop ? (isOdd ? -1 : 1) : 0;
+            const rotY = isDesktop ? (isOdd ? 0.4 : -0.4) : 0;
 
             scrollTl.to(canRef.current.position, {
                 x: xPos,
                 ease: "circ.inOut",
-                delay: 0.5
-            })
+                duration: 1
+            });
 
-            .to(canRef.current.position, {
-                y: yRot,
+            // rotate, not move Y
+            scrollTl.to(canRef.current.rotation, {
+                y: rotY,
                 ease: "back.inOut",
-            }, "<")
-                .to(".alternating-text-container", {
-                    backgroundColor: gsap.utils.wrap(bgColors, index)
-                })
+                duration: 1
+            }, "<");
+
+            // background color on each section
+            const bg = bgColors[index % bgColors.length];
+            scrollTl.to(".alternating-text-container", {
+                backgroundColor: bg,
+                duration: 0.5
+            }, "<");
         });
-    }, { dependencies: [isDesktop] })
+    }, { dependencies: [isDesktop] });
 
     return (
-        <group ref={canRef} position-x={isDesktop ? 1 : 0} position-y={isDesktop ? -0.3: 0}>
+        <group 
+            ref={canRef} 
+            position-x={isDesktop ? 1 : 0} 
+            position-y={isDesktop ? -0.3 : 0}
+        >
             <FloatingCan flavor='strawberryLemonade' />
             <Environment files={'/hdr/lobby.hdr'} environmentIntensity={1.5} />
         </group>
     )
 }
 
-export default Scene
+export default Scene;

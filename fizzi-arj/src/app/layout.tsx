@@ -4,7 +4,6 @@ import "./index.css";
 
 import localFont from 'next/font/local'
 import ViewCanvas from "@/components/ViewCanvas";
-import Footer from "@/components/Footer";
 import HeaderWrapper from "@/components/wrapper/HeaderWrapper";
 import FooterWrapper from "@/components/wrapper/FooterWrapper";
 

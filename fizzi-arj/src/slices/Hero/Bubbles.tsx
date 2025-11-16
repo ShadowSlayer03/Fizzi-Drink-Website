@@ -5,7 +5,7 @@ import { useRef, useEffect } from "react";
 import { useFrame } from "@react-three/fiber";
 import gsap from "gsap";
 
-const o = new THREE.Object3D();
+// const o = new THREE.Object3D();
 
 type BubblesProps = {
   count?: number;
@@ -14,7 +14,7 @@ type BubblesProps = {
   opacity?: number;
   repeat?: boolean;
   color?: number;
-  blendMode?: "normal" | "additive" | "subtractive" | "multiply" | "screen" | "difference"; // prop
+  blendMode?: "normal" | "additive" | "subtractive" | "multiply" | "screen" | "difference";
 };
 
 export function Bubbles({
@@ -39,8 +39,8 @@ export function Bubbles({
     additive: THREE.AdditiveBlending,
     subtractive: THREE.SubtractiveBlending,
     multiply: THREE.MultiplyBlending,
-    screen: THREE.CustomBlending, // approximate
-    difference: THREE.CustomBlending, // will need custom shader or CSS overlay
+    screen: THREE.CustomBlending,
+    difference: THREE.CustomBlending,
   };
 
   const material = new THREE.MeshStandardMaterial({

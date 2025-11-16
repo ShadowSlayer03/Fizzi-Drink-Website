@@ -12,9 +12,9 @@ export default async function Home() {
   const home = await client.getByUID("page", "home");
 
   return (
-  // <LoaderWrapper>
+  <LoaderWrapper>
       <SliceZone slices={home.data.slices} components={components} />
-    // </LoaderWrapper>
+  </LoaderWrapper>
   );
 }
 

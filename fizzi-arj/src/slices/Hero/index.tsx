@@ -1,7 +1,7 @@
 "use client";
 
 import gsap from "gsap";
-import { FC, useState } from "react";
+import { FC } from "react";
 import Button from "@/components/Button";
 import { asText, Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
@@ -15,10 +15,7 @@ import { useStore } from "@/hooks/useStore";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import TextSplitter from "@/components/TextSplitter";
 import { Bounded } from "@/components/Bounded";
-import dynamic from "next/dynamic";
 import NavMenu from "@/components/NavMenu";
-
-const FizziWaveMenu = dynamic(() => import("../../components/FizziWaveMenu"), { ssr: false });
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);

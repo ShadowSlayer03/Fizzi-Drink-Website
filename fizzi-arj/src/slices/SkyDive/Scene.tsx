@@ -1,7 +1,7 @@
 "use client";
 
 import { Content } from "@prismicio/client";
-import { Cloud, Clouds, Environment, OrbitControls, Text3D } from "@react-three/drei";
+import { Cloud, Clouds, Environment, Text3D } from "@react-three/drei";
 import { useRef } from "react";
 import * as THREE from "three";
 import gsap from "gsap";
@@ -11,7 +11,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import FloatingCan from "@/components/FloatingCan";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
-gsap.registerPlugin(ScrollTrigger); // don't register hook as plugin
+gsap.registerPlugin(ScrollTrigger);
 
 type SkyDiveProps = {
     sentence: string | null;
@@ -219,8 +219,8 @@ function ThreeText3D({
     // Return an array of Text3D elements so the parent group's children are these meshes
     return words.map((word, i) => {
         const wordWidth = word.length * charWidth;
-        const x = xOffset + wordWidth / 2; // center each word around its midpoint
-        const initialY = 0; // parent GSAP will set to getXYPositions(7), so this can be 0
+        const x = xOffset + wordWidth / 2;
+        const initialY = 0;
         const initialZ = 0;
 
         // advance offset for next word
