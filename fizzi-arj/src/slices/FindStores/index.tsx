@@ -94,7 +94,6 @@ const FindStores: FC<FindStoresProps> = ({ slice }) => {
       color: selectedTheme.ambientLight,
     }));
 
-  // 🌟 GSAP Animations
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
