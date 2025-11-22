@@ -158,7 +158,7 @@ function LiquidParticles({
 }) {
   const particlesRef = useRef<THREE.Points | null>(null);
   const particleCount = 200;
-  const velocities = useRef<Float32Array>();
+  const velocities = useRef<Float32Array | null>(null);
 
   useEffect(() => {
     if (!particlesRef.current) return;

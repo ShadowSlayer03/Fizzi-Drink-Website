@@ -42,7 +42,9 @@ const SocialButtons = () => {
       {socials.map((social, i) => (
         <button
           key={i}
-          ref={(el) => (buttonsRef.current[i] = el)}
+          ref={(el) => {
+            buttonsRef.current[i] = el;
+          }}
           onClick={() => window.open(social.url, "_blank")}
           className="relative w-20 h-20 flex items-center justify-center rounded-full overflow-hidden bg-[#fff0d9] hover:shadow-[0_0_20px_rgba(0,0,0,0.3)] transition-shadow duration-300"
         >

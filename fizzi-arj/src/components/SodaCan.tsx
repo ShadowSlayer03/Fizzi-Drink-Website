@@ -24,6 +24,8 @@ const metalMaterial = new THREE.MeshStandardMaterial({
 export type SodaCanProps = {
   flavor?: keyof typeof flavorTextures;
   scale?: number;
+  onPointerOver?: (e?: any) => void;
+  onPointerOut?: (e?: any) => void;
 };
 
 export const SodaCan = forwardRef<THREE.Group, SodaCanProps>(
