@@ -23,12 +23,12 @@ type FloatingCanProps = {
   position: [number, number, number];
   rotation: [number, number, number];
   flavor:
-    | "lemonLime"
-    | "grape"
-    | "blackCherry"
-    | "strawberryLemonade"
-    | "watermelon"
-    | undefined;
+  | "lemonLime"
+  | "grape"
+  | "blackCherry"
+  | "strawberryLemonade"
+  | "watermelon"
+  | undefined;
   onExplode?: boolean;
   // forwarded ref will be a Group
 };
@@ -221,10 +221,11 @@ const LandingSlice: FC<LandingSliceProps> = ({ slice }) => {
   const canvasWrapperRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    // Keep page locked until we reveal (optional)
     document.body.style.overflow = "hidden";
-    const removeOverflow = () => (document.body.style.overflow = "auto");
-    return removeOverflow;
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, []);
 
   // Explosion helper (unchanged)
@@ -252,7 +253,7 @@ const LandingSlice: FC<LandingSliceProps> = ({ slice }) => {
             zIndex: "1000",
             boxShadow: "0 0 20px rgba(0,0,0,0.12)",
           });
-          bubblesRef.current.appendChild(bubble);
+          bubblesRef.current?.appendChild(bubble);
 
           gsap.to(bubble, {
             x: gsap.utils.random(-400, 400),

@@ -1,4 +1,5 @@
-// components/SodaCan.tsx
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 "use client";
 
 import { useGLTF, useTexture } from "@react-three/drei";
