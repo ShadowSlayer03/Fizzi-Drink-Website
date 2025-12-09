@@ -7,7 +7,7 @@ From bubbling waves to interactive globes and games, Fizzi delivers an immersive
 
 ## 🌐 Live Preview
 
-👉 [**View Live Site**](https://fizzi.vercel.app)
+👉 [**View Live Site**](https://fizzi-arj.vercel.app)
 
 ---
 
